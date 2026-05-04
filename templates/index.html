@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Dorming Access{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center align-items-center min-vh-75">
+  <div class="col-lg-7">
+    <div class="card shadow-lg rounded-5 border-0 overflow-hidden">
+      <div class="row g-0">
+        <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center bg-dorming-dark text-white p-5">
+          <div>
+            <h2 class="fw-bold">Dorming</h2>
+            <p class="mb-4">A modern dorm booking system built for students, landlords, and local businesses.</p>
+            <p class="small opacity-75">Access a simplified account path and discover student housing quickly.</p>
+          </div>
+        </div>
+        <div class="col-md-6 p-5">
+          <div class="mb-4 text-center">
+            <h3 class="fw-bold">LOG IN AS</h3>
+            <p class="text-muted">Select the account role to continue into Dorming.</p>
+          </div>
+          <div class="d-grid gap-3">
+            <a href="{{ url_for('login_as', user_type='student') }}" class="btn btn-dorming btn-lg rounded-pill">STUDENT</a>
+            <a href="{{ url_for('login_as', user_type='landlord') }}" class="btn btn-outline-dorming btn-lg rounded-pill">LANDLORD</a>
+            <a href="{{ url_for('login_as', user_type='business') }}" class="btn btn-outline-secondary btn-lg rounded-pill">BUSINESS</a>
+          </div>
+          <div class="mt-4 text-center text-muted small">
+            Use the buttons above to explore Dorming as a student, landlord, or business.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
